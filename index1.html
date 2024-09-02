@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index1.html">Recipes</a></li>
+                <li><a href="index2.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <h1>Recipe Book</h1>
+        <input type="text" id="search-bar" placeholder="Search recipes...">
+        <button id="add-recipe-btn">Add Recipe</button>
+    </header>
+    <main>
+        <div id="category-buttons"></div>
+        <div id="recipe-list">
+            <div class="recipe-card">
+                <img src="recipe-image-url" alt="Recipe Image">
+                <h3>Recipe Name</h3>
+                <button class="view-btn">View</button>
+                <div class="recipe-details">
+                    <p>Ingredients: ...</p>
+                    <p>Instructions: ...</p>
+                </div>
+                <div class="recipe-buttons">
+                    <button class="edit-btn">Edit</button>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <!-- More recipe cards... -->
+        </div>
+        <div id="add-recipe">
+            <h2 id="form-title">Add a New Recipe</h2>
+            <form id="recipe-form">
+                <input type="hidden" id="recipe-index">
+                <label for="recipe-name">Name:</label>
+                <input type="text" id="recipe-name" required>
+                <label for="recipe-image">Image URL:</label>
+                <input type="text" id="recipe-image" required>
+                <label for="recipe-category">Category:</label>
+                <select id="recipe-category">
+                    <option value="veg">Vegetarian</option>
+                    <option value="non-veg">Non-Vegetarian</option>
+                    <option value="cake">Cake</option>
+                    <option value="Chinese">Chinese</option>
+                </select>
+                <label for="recipe-ingredients">Ingredients:</label>
+                <textarea id="recipe-ingredients" required></textarea>
+                <label for="recipe-instructions">Instructions:</label>
+                <textarea id="recipe-instructions" required></textarea>
+                <button type="submit">Save Recipe</button>
+            </form>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

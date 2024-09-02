@@ -1,0 +1,167 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://img.freepik.com/free-photo/top-view-chat-bubbles-with-telephone-receiver-copy-space_23-2148796078.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1724976000&semt=ais_hybrid);
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0; /* Removed padding from body to avoid extra space around container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #431e1e;
+    min-height: 100vh; /* Ensures body takes at least full viewport height */
+}
+.nav-links {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+header {
+    background-color: #f5aca4;
+    color: #fff;
+    padding: 1em;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main {
+    margin-left: 250px; /* Space for the fixed sidebar */
+    padding: 1em;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav-links li {
+    margin: 0.5em 0; /* Space out each navigation link */
+}
+
+.nav-links a {
+    display: block; /* Make links block-level for full-width clickable area */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White text color */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 0.5em 1em; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    background-color: #ffffff33; /* Semi-transparent white background on hover */
+    color: #1f685f; /* Darker text color on hover */
+}
+
+
+/* Container for the Contact Us form */
+.container {
+    position: relative;
+    max-width: 500px;
+    width: 90%; /* Ensures container is responsive */
+    background: rgba(225, 187, 187, 0.857); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 12px; /* More rounded corners for 3D effect */
+    transform: perspective(1000px) rotateX(2deg); /* Creates a subtle 3D effect */
+    transition: transform 1s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 6px 6px 1.2px hsla(0, 43%, 33%, 0.788);  
+}
+
+.container:hover {
+    transform: perspective(1000px) rotateX(0deg) scale(1.02); /* Slight scale effect on hover */
+    box-shadow: 6px 6px 1.2px hsla(0, 49%, 53%, 0.788);  
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input, textarea, select styles */
+input, textarea, select {
+    width: calc(100% - 20px); /* Adjusted for padding inside input elements */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #974c4c;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    text-align: center; /* Centers the placeholder text */
+}
+
+textarea {
+    height: 100px; /* Sets a fixed height for the textarea */
+    resize: vertical; /* Allows resizing only vertically */
+}
+
+/* Button styles */
+button {
+    background-color: hsla(0, 43%, 33%, 0.788); 
+    box-shadow: 3px 3px 0.2px hsla(0, 49%, 53%, 0.788); 
+    color: white;
+    padding: 10px;
+    margin-top: 10%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+    font-size: 16px;
+    transition: background-color 1s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #420e0e;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Hyperlink styles */
+a {
+    color: #2a9d8f; /* Color for hyperlinks */
+    font-size: 16px; /* Font size for better readability */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #1f685f; /* Darker color on hover */
+    background-color: rgba(255, 255, 255, 0.3); /* Light background on hover for better visibility */
+    padding: 5px; /* Slight padding on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 20px; /* Slightly smaller heading */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Smaller heading for very small screens */
+    }
+
+    input, textarea, select {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding */
+    }
+}
